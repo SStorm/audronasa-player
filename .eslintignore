@@ -1,0 +1,4 @@
+build
+/coverage
+public/initSegment.js
+__mocks__
