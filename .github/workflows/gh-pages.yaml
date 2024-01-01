@@ -1,4 +1,3 @@
-# Sample workflow for building and deploying a Hugo site to GitHub Pages
 name: Deploy Site to Pages
 
 on:
@@ -37,12 +36,9 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
-      - name: Build with Hugo
-        env:
-          # For maximum backward compatibility with Hugo modules
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
+      - name: Build page
         run: |
+          npm install
           npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
